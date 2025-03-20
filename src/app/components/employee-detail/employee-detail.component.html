@@ -1,0 +1,9 @@
+<div *ngIf="employee">
+  <h3>Employee Details</h3>
+  <p><strong>Name:</strong> {{ employee.name }}</p>
+  <p><strong>Email:</strong> {{ employee.email }}</p>
+  <p><strong>Position:</strong> {{ employee.position }}</p>
+  <p><strong>Salary:</strong> ${{ employee.salary }}</p>
+
+  <button (click)="notifyParent()">Notify Parent</button>
+</div>

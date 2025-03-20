@@ -1,0 +1,14 @@
+<h2>Employee List</h2>
+<ul>
+  <li *ngFor="let emp of employees" (click)="selectEmployee(emp)">
+    {{ emp.name }}
+  </li>
+</ul>
+
+
+<app-employee-detail 
+  [employee]="selectedEmployee" 
+  (notify) ="receiveNotification($event)">
+</app-employee-detail>
+
+<p>{{ notification }}</p>
